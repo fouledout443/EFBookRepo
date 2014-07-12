@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2fd44c75b6dd4e2686d1e922999cce9f" Name="Diagram1">
+        <EntityTypeShape EntityType="jnolanModel.ADMINISTRATOR" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.BILLING_ADDRESS" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.BOOK" Width="1.5" PointX="6" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.CATEGORY" Width="1.5" PointX="3.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.CCARD" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.CONTACT" Width="1.5" PointX="6" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.CUSTOMER" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.CUSTOMER_CCARD" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.CUSTOMER1" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.INVOICE" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.ORDER_DETAIL" Width="1.5" PointX="11" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.ORDERR" Width="1.5" PointX="8.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.PUB_ADDRESS" Width="1.5" PointX="6" PointY="20.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.PUBLISHER" Width="1.5" PointX="3.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.SERVICE" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.SHIPPING_ADDRESS" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.SHOPPING_CART" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.sysdiagram" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.SystemUser" Width="1.5" PointX="11.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.AllCustomerHistory" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.CheckoutButton" Width="1.5" PointX="12.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.CustomerHistory" Width="1.5" PointX="10.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.CustomersView" Width="1.5" PointX="12.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.InventoryListView" Width="1.5" PointX="13.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="jnolanModel.Multicard" Width="1.5" PointX="13.75" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="jnolanModel.Book_CatFK" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.Book_PubFK" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.Cart_BookIDFK" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.CUSTOMER_CCARDFK2" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.ContactFK" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.CUSTOMER_CCARDFK" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.InvoiceFK2" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.Cart_CIDFK" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.InvoiceFK" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.Order_DetailFK" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.Pub_Pub_AddFK" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.CUSTOMERS_BILLING_ADDRESS" ManuallyRouted="false" />
+        <AssociationConnector Association="jnolanModel.CUSTOMERS_SHIPPING_ADDRESS" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

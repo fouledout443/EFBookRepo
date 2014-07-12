@@ -1,0 +1,23 @@
+﻿@model EFBook.CATEGORY
+
+@{
+    ViewBag.Title = "Browse Books";
+}
+ 
+<div class="category">
+    <h3><em>@Model.CategoryName</em> Books</h3>
+ 
+    <ul id="book-list">
+        @foreach (var book in Model.BOOKS)
+        {
+            <li>
+                <a href="@Url.Action("Details", 
+                    new { id = book.BookID })">
+                    <img alt="@book.Title" 
+                        src="~/Content/Images/placeholder.png"/>
+                    <span>@book.Title</span>
+                </a>
+            </li>
+        }
+    </ul>
+</div>

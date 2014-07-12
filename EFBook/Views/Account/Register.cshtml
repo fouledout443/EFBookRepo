@@ -1,0 +1,57 @@
+﻿@model EFBook.Models.RegisterModel
+@*@{
+    ViewBag.Title = "Register";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Create a new account.</h2>
+</hgroup>*@
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ul>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.PasswordFor(m => m.ConfirmPassword)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.FirstName)
+                @Html.PasswordFor(m => m.FirstName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.LastName)
+                @Html.PasswordFor(m => m.LastName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Email)
+                @Html.PasswordFor(m => m.Email)
+            </li>
+            <li>
+                Customer account type is: customer
+            </li>
+            <li>
+                @Html.LabelFor(m => m.AccountType)
+                @Html.PasswordFor(m => m.AccountType)
+            </li>
+        </ul>
+        <input type="submit" value="Register" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,78 @@
+﻿@model EFBook.BOOK
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>BOOK</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Isbn)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Isbn)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Title)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Author)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Author)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Quantity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quantity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PUBLISHER.Publisher_Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PUBLISHER.Publisher_Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CATEGORY.CategoryName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CATEGORY.CategoryName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CopyDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CopyDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Cost)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Cost)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.BookID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

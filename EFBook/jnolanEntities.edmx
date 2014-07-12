@@ -1,0 +1,2173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="jnolanModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="jnolanModelStoreContainer">
+          <EntitySet Name="ADMINISTRATOR" EntityType="jnolanModel.Store.ADMINISTRATOR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BILLING_ADDRESS" EntityType="jnolanModel.Store.BILLING_ADDRESS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="BOOKS" EntityType="jnolanModel.Store.BOOKS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CATEGORY" EntityType="jnolanModel.Store.CATEGORY" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CCARD" EntityType="jnolanModel.Store.CCARD" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CONTACT" EntityType="jnolanModel.Store.CONTACT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CUSTOMER" EntityType="jnolanModel.Store.CUSTOMER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CUSTOMER_CCARD" EntityType="jnolanModel.Store.CUSTOMER_CCARD" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CUSTOMERS" EntityType="jnolanModel.Store.CUSTOMERS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CUSTOMERS_BILLING_ADDRESS" EntityType="jnolanModel.Store.CUSTOMERS_BILLING_ADDRESS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="CUSTOMERS_SHIPPING_ADDRESS" EntityType="jnolanModel.Store.CUSTOMERS_SHIPPING_ADDRESS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="INVOICE" EntityType="jnolanModel.Store.INVOICE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ORDER_DETAIL" EntityType="jnolanModel.Store.ORDER_DETAIL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ORDERR" EntityType="jnolanModel.Store.ORDERR" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PUB_ADDRESS" EntityType="jnolanModel.Store.PUB_ADDRESS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PUBLISHER" EntityType="jnolanModel.Store.PUBLISHER" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SERVICE" EntityType="jnolanModel.Store.SERVICE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SHIPPING_ADDRESS" EntityType="jnolanModel.Store.SHIPPING_ADDRESS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SHOPPING_CART" EntityType="jnolanModel.Store.SHOPPING_CART" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="jnolanModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SystemUsers" EntityType="jnolanModel.Store.SystemUsers" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="AllCustomerHistory" EntityType="jnolanModel.Store.AllCustomerHistory" store:Type="Views" store:Schema="dbo" store:Name="AllCustomerHistory">
+            <DefiningQuery>SELECT 
+      [AllCustomerHistory].[FirstName] AS [FirstName], 
+      [AllCustomerHistory].[Lastname] AS [Lastname], 
+      [AllCustomerHistory].[DatePurchased] AS [DatePurchased], 
+      [AllCustomerHistory].[BookTitle] AS [BookTitle], 
+      [AllCustomerHistory].[ShipStreet] AS [ShipStreet], 
+      [AllCustomerHistory].[ShipCity] AS [ShipCity], 
+      [AllCustomerHistory].[ShipST] AS [ShipST], 
+      [AllCustomerHistory].[ShipCountry] AS [ShipCountry], 
+      [AllCustomerHistory].[ShipZip] AS [ShipZip], 
+      [AllCustomerHistory].[BillStreet] AS [BillStreet], 
+      [AllCustomerHistory].[BillCity] AS [BillCity], 
+      [AllCustomerHistory].[BillST] AS [BillST], 
+      [AllCustomerHistory].[BillCountry] AS [BillCountry], 
+      [AllCustomerHistory].[BillZip] AS [BillZip], 
+      [AllCustomerHistory].[BillingAddress] AS [BillingAddress], 
+      [AllCustomerHistory].[CreditCard] AS [CreditCard], 
+      [AllCustomerHistory].[BookPrice] AS [BookPrice], 
+      [AllCustomerHistory].[ExtendedPrice] AS [ExtendedPrice]
+      FROM [dbo].[AllCustomerHistory] AS [AllCustomerHistory]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CheckoutButton" EntityType="jnolanModel.Store.CheckoutButton" store:Type="Views" store:Schema="dbo" store:Name="CheckoutButton">
+            <DefiningQuery>SELECT 
+      [CheckoutButton].[BookTitle] AS [BookTitle], 
+      [CheckoutButton].[ShipStreet] AS [ShipStreet], 
+      [CheckoutButton].[ShipCity] AS [ShipCity], 
+      [CheckoutButton].[ShipST] AS [ShipST], 
+      [CheckoutButton].[ShipCountry] AS [ShipCountry], 
+      [CheckoutButton].[ShipZip] AS [ShipZip], 
+      [CheckoutButton].[BillStreet] AS [BillStreet], 
+      [CheckoutButton].[BillCity] AS [BillCity], 
+      [CheckoutButton].[BillST] AS [BillST], 
+      [CheckoutButton].[BillCountry] AS [BillCountry], 
+      [CheckoutButton].[BillZip] AS [BillZip], 
+      [CheckoutButton].[BillingAddress] AS [BillingAddress], 
+      [CheckoutButton].[CreditCard] AS [CreditCard], 
+      [CheckoutButton].[BookPrice] AS [BookPrice], 
+      [CheckoutButton].[ExtendedPrice] AS [ExtendedPrice]
+      FROM [dbo].[CheckoutButton] AS [CheckoutButton]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CustomerHistory" EntityType="jnolanModel.Store.CustomerHistory" store:Type="Views" store:Schema="dbo" store:Name="CustomerHistory">
+            <DefiningQuery>SELECT 
+      [CustomerHistory].[DatePurchased] AS [DatePurchased], 
+      [CustomerHistory].[BookTitle] AS [BookTitle], 
+      [CustomerHistory].[ShipStreet] AS [ShipStreet], 
+      [CustomerHistory].[ShipCity] AS [ShipCity], 
+      [CustomerHistory].[ShipST] AS [ShipST], 
+      [CustomerHistory].[ShipCountry] AS [ShipCountry], 
+      [CustomerHistory].[ShipZip] AS [ShipZip], 
+      [CustomerHistory].[BillStreet] AS [BillStreet], 
+      [CustomerHistory].[BillCity] AS [BillCity], 
+      [CustomerHistory].[BillST] AS [BillST], 
+      [CustomerHistory].[BillCountry] AS [BillCountry], 
+      [CustomerHistory].[BillZip] AS [BillZip], 
+      [CustomerHistory].[BillingAddress] AS [BillingAddress], 
+      [CustomerHistory].[CreditCard] AS [CreditCard], 
+      [CustomerHistory].[BookPrice] AS [BookPrice], 
+      [CustomerHistory].[ExtendedPrice] AS [ExtendedPrice]
+      FROM [dbo].[CustomerHistory] AS [CustomerHistory]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="CustomersView" EntityType="jnolanModel.Store.CustomersView" store:Type="Views" store:Schema="dbo" store:Name="CustomersView">
+            <DefiningQuery>SELECT 
+      [CustomersView].[ID] AS [ID], 
+      [CustomersView].[Email] AS [Email], 
+      [CustomersView].[Phone] AS [Phone], 
+      [CustomersView].[FirstName] AS [FirstName], 
+      [CustomersView].[LastName] AS [LastName], 
+      [CustomersView].[ST] AS [ST]
+      FROM [dbo].[CustomersView] AS [CustomersView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="InventoryListView" EntityType="jnolanModel.Store.InventoryListView" store:Type="Views" store:Schema="dbo" store:Name="InventoryListView">
+            <DefiningQuery>SELECT 
+      [InventoryListView].[BookID] AS [BookID], 
+      [InventoryListView].[ISBN] AS [ISBN], 
+      [InventoryListView].[BookTitle] AS [BookTitle], 
+      [InventoryListView].[BookAuthor] AS [BookAuthor], 
+      [InventoryListView].[PublisherName] AS [PublisherName], 
+      [InventoryListView].[CategoryName] AS [CategoryName], 
+      [InventoryListView].[BookPrice] AS [BookPrice], 
+      [InventoryListView].[QuantityOnHand] AS [QuantityOnHand], 
+      [InventoryListView].[CopyrightDate] AS [CopyrightDate], 
+      [InventoryListView].[Cost] AS [Cost]
+      FROM [dbo].[InventoryListView] AS [InventoryListView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Multicard" EntityType="jnolanModel.Store.Multicard" store:Type="Views" store:Schema="dbo" store:Name="Multicard">
+            <DefiningQuery>SELECT 
+      [Multicard].[Email] AS [Email], 
+      [Multicard].[Fname] AS [Fname], 
+      [Multicard].[Lname] AS [Lname], 
+      [Multicard].[Phone] AS [Phone], 
+      [Multicard].[CardType] AS [CardType], 
+      [Multicard].[CardNumber] AS [CardNumber]
+      FROM [dbo].[Multicard] AS [Multicard]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="Book_CatFK" Association="jnolanModel.Store.Book_CatFK">
+            <End Role="CATEGORY" EntitySet="CATEGORY" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="Book_PubFK" Association="jnolanModel.Store.Book_PubFK">
+            <End Role="PUBLISHER" EntitySet="PUBLISHER" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="Cart_BookIDFK" Association="jnolanModel.Store.Cart_BookIDFK">
+            <End Role="BOOKS" EntitySet="BOOKS" />
+            <End Role="SHOPPING_CART" EntitySet="SHOPPING_CART" />
+          </AssociationSet>
+          <AssociationSet Name="Cart_CIDFK" Association="jnolanModel.Store.Cart_CIDFK">
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS" />
+            <End Role="SHOPPING_CART" EntitySet="SHOPPING_CART" />
+          </AssociationSet>
+          <AssociationSet Name="CB_Billing_IDFK" Association="jnolanModel.Store.CB_Billing_IDFK">
+            <End Role="BILLING_ADDRESS" EntitySet="BILLING_ADDRESS" />
+            <End Role="CUSTOMERS_BILLING_ADDRESS" EntitySet="CUSTOMERS_BILLING_ADDRESS" />
+          </AssociationSet>
+          <AssociationSet Name="CB_CIDFK" Association="jnolanModel.Store.CB_CIDFK">
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS" />
+            <End Role="CUSTOMERS_BILLING_ADDRESS" EntitySet="CUSTOMERS_BILLING_ADDRESS" />
+          </AssociationSet>
+          <AssociationSet Name="ContactFK" Association="jnolanModel.Store.ContactFK">
+            <End Role="PUBLISHER" EntitySet="PUBLISHER" />
+            <End Role="CONTACT" EntitySet="CONTACT" />
+          </AssociationSet>
+          <AssociationSet Name="CS_CIDFK" Association="jnolanModel.Store.CS_CIDFK">
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS" />
+            <End Role="CUSTOMERS_SHIPPING_ADDRESS" EntitySet="CUSTOMERS_SHIPPING_ADDRESS" />
+          </AssociationSet>
+          <AssociationSet Name="CS_SH_Add_IDFK" Association="jnolanModel.Store.CS_SH_Add_IDFK">
+            <End Role="SHIPPING_ADDRESS" EntitySet="SHIPPING_ADDRESS" />
+            <End Role="CUSTOMERS_SHIPPING_ADDRESS" EntitySet="CUSTOMERS_SHIPPING_ADDRESS" />
+          </AssociationSet>
+          <AssociationSet Name="CUSTOMER_CCARDFK" Association="jnolanModel.Store.CUSTOMER_CCARDFK">
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS" />
+            <End Role="CUSTOMER_CCARD" EntitySet="CUSTOMER_CCARD" />
+          </AssociationSet>
+          <AssociationSet Name="CUSTOMER_CCARDFK2" Association="jnolanModel.Store.CUSTOMER_CCARDFK2">
+            <End Role="CCARD" EntitySet="CCARD" />
+            <End Role="CUSTOMER_CCARD" EntitySet="CUSTOMER_CCARD" />
+          </AssociationSet>
+          <AssociationSet Name="InvoiceFK" Association="jnolanModel.Store.InvoiceFK">
+            <End Role="SHOPPING_CART" EntitySet="SHOPPING_CART" />
+            <End Role="INVOICE" EntitySet="INVOICE" />
+          </AssociationSet>
+          <AssociationSet Name="InvoiceFK2" Association="jnolanModel.Store.InvoiceFK2">
+            <End Role="CUSTOMER_CCARD" EntitySet="CUSTOMER_CCARD" />
+            <End Role="INVOICE" EntitySet="INVOICE" />
+          </AssociationSet>
+          <AssociationSet Name="Order_DetailFK" Association="jnolanModel.Store.Order_DetailFK">
+            <End Role="ORDERR" EntitySet="ORDERR" />
+            <End Role="ORDER_DETAIL" EntitySet="ORDER_DETAIL" />
+          </AssociationSet>
+          <AssociationSet Name="Pub_Pub_AddFK" Association="jnolanModel.Store.Pub_Pub_AddFK">
+            <End Role="PUBLISHER" EntitySet="PUBLISHER" />
+            <End Role="PUB_ADDRESS" EntitySet="PUB_ADDRESS" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ADMINISTRATOR">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="FName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="Pword" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="LoginStatus" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="BILLING_ADDRESS">
+          <Key>
+            <PropertyRef Name="Billing_ID" />
+          </Key>
+          <Property Name="Billing_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Street" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="City" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ST" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="Country" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="Zip" Type="numeric" Nullable="false" Precision="5" />
+        </EntityType>
+        <EntityType Name="BOOKS">
+          <Key>
+            <PropertyRef Name="BookID" />
+          </Key>
+          <Property Name="BookID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Isbn" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="Title" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="Author" Type="char" Nullable="false" MaxLength="50" />
+          <Property Name="Price" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="Quantity" Type="numeric" Nullable="false" Precision="12" />
+          <Property Name="Publisher_ID" Type="int" Nullable="false" />
+          <Property Name="Category_ID" Type="int" Nullable="false" />
+          <Property Name="CopyDate" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="Cost" Type="numeric" Nullable="false" Precision="8" Scale="2" />
+        </EntityType>
+        <EntityType Name="CATEGORY">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="Category_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="char" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="CCARD">
+          <Key>
+            <PropertyRef Name="CCARDID" />
+          </Key>
+          <Property Name="CCARDID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CardType" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="CCardNumber" Type="numeric" Nullable="false" Precision="12" />
+          <Property Name="LName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="FName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="ExpirationDate" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="SecurityCode" Type="numeric" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="CONTACT">
+          <Key>
+            <PropertyRef Name="Contact_ID" />
+          </Key>
+          <Property Name="Contact_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="FName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="Phone" Type="numeric" Precision="10" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Publisher_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CUSTOMER">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="LastName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="Email" Type="char" MaxLength="100" />
+          <Property Name="Username" Type="varchar" MaxLength="20" />
+          <Property Name="Pword" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="CUSTOMER_CCARD">
+          <Key>
+            <PropertyRef Name="CUSTOMER_CCARD_ID" />
+          </Key>
+          <Property Name="CUSTOMER_CCARD_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CID" Type="int" Nullable="false" />
+          <Property Name="CCardID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CUSTOMERS">
+          <Key>
+            <PropertyRef Name="CID" />
+          </Key>
+          <Property Name="CID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="FName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="Gender" Type="char" MaxLength="10" />
+          <Property Name="HPhone" Type="numeric" Precision="10" />
+          <Property Name="WPhone" Type="numeric" Precision="10" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Pword" Type="varchar" MaxLength="10" />
+          <Property Name="LoginStatus" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="CUSTOMERS_BILLING_ADDRESS">
+          <Key>
+            <PropertyRef Name="CID" />
+            <PropertyRef Name="Billing_ID" />
+          </Key>
+          <Property Name="CID" Type="int" Nullable="false" />
+          <Property Name="Billing_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CUSTOMERS_SHIPPING_ADDRESS">
+          <Key>
+            <PropertyRef Name="CID" />
+            <PropertyRef Name="SH_Add_ID" />
+          </Key>
+          <Property Name="CID" Type="int" Nullable="false" />
+          <Property Name="SH_Add_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="INVOICE">
+          <Key>
+            <PropertyRef Name="Invoice_ID" />
+          </Key>
+          <Property Name="Invoice_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Date_Of_Purchase" Type="date" Nullable="false" />
+          <Property Name="Record_ID" Type="int" Nullable="false" />
+          <Property Name="BookID" Type="int" Nullable="false" />
+          <Property Name="CUSTOMER_CCARD_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ORDER_DETAIL">
+          <Key>
+            <PropertyRef Name="OrderDetail_ID" />
+          </Key>
+          <Property Name="OrderDetail_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Order_ID" Type="int" Nullable="false" />
+          <Property Name="BookID" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="UnitPrice" Type="numeric" Nullable="false" Precision="8" Scale="2" />
+        </EntityType>
+        <EntityType Name="ORDERR">
+          <Key>
+            <PropertyRef Name="Order_ID" />
+          </Key>
+          <Property Name="Order_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Address" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="50" />
+          <Property Name="ST" Type="varchar" MaxLength="50" />
+          <Property Name="PostalCode" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Country" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="Phone" Type="varchar" MaxLength="25" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="UnitPrice" Type="numeric" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="DateOfOrder" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PUB_ADDRESS">
+          <Key>
+            <PropertyRef Name="Pub_Add_ID" />
+          </Key>
+          <Property Name="Pub_Add_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Street" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="City" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ST" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="Country" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="Zip" Type="numeric" Nullable="false" Precision="5" />
+          <Property Name="Publisher_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PUBLISHER">
+          <Key>
+            <PropertyRef Name="Publisher_ID" />
+          </Key>
+          <Property Name="Publisher_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Publisher_Name" Type="char" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="SERVICE">
+          <Key>
+            <PropertyRef Name="Service" />
+          </Key>
+          <Property Name="Service" Type="int" Nullable="false" />
+          <Property Name="Description" Type="char" Nullable="false" MaxLength="50" />
+          <Property Name="UnitPrice" Type="numeric" Nullable="false" Precision="8" Scale="2" />
+        </EntityType>
+        <EntityType Name="SHIPPING_ADDRESS">
+          <Key>
+            <PropertyRef Name="SH_Add_ID" />
+          </Key>
+          <Property Name="SH_Add_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Street" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="City" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ST" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="Country" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="Zip" Type="numeric" Nullable="false" Precision="5" />
+        </EntityType>
+        <EntityType Name="SHOPPING_CART">
+          <Key>
+            <PropertyRef Name="Record_ID" />
+          </Key>
+          <Property Name="Record_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Cart_ID" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="CartStatus" Type="varchar" MaxLength="25" />
+          <Property Name="BookID" Type="int" Nullable="false" />
+          <Property Name="CID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="SystemUsers">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="150" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="PasswordSalt" Type="nchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'jnolan.dbo.AllCustomerHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="AllCustomerHistory">
+          <Key>
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="Lastname" />
+            <PropertyRef Name="DatePurchased" />
+            <PropertyRef Name="BookTitle" />
+            <PropertyRef Name="ShipStreet" />
+            <PropertyRef Name="ShipCity" />
+            <PropertyRef Name="ShipST" />
+            <PropertyRef Name="ShipCountry" />
+            <PropertyRef Name="ShipZip" />
+            <PropertyRef Name="BillStreet" />
+            <PropertyRef Name="BillCity" />
+            <PropertyRef Name="BillST" />
+            <PropertyRef Name="BillCountry" />
+            <PropertyRef Name="BillZip" />
+            <PropertyRef Name="BillingAddress" />
+            <PropertyRef Name="CreditCard" />
+          </Key>
+          <Property Name="FirstName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="Lastname" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="DatePurchased" Type="date" Nullable="false" />
+          <Property Name="BookTitle" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipStreet" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipCity" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipST" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="ShipCountry" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipZip" Type="numeric" Nullable="false" Precision="5" />
+          <Property Name="BillStreet" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BillCity" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BillST" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="BillCountry" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BillZip" Type="numeric" Nullable="false" Precision="5" />
+          <Property Name="BillingAddress" Type="int" Nullable="false" />
+          <Property Name="CreditCard" Type="numeric" Nullable="false" Precision="12" />
+          <Property Name="BookPrice" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="ExtendedPrice" Type="numeric" Precision="21" Scale="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'jnolan.dbo.CheckoutButton' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CheckoutButton">
+          <Key>
+            <PropertyRef Name="BookTitle" />
+            <PropertyRef Name="ShipStreet" />
+            <PropertyRef Name="ShipCity" />
+            <PropertyRef Name="ShipST" />
+            <PropertyRef Name="ShipCountry" />
+            <PropertyRef Name="ShipZip" />
+            <PropertyRef Name="BillStreet" />
+            <PropertyRef Name="BillCity" />
+            <PropertyRef Name="BillST" />
+            <PropertyRef Name="BillCountry" />
+            <PropertyRef Name="BillZip" />
+            <PropertyRef Name="BillingAddress" />
+            <PropertyRef Name="CreditCard" />
+          </Key>
+          <Property Name="BookTitle" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipStreet" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipCity" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipST" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="ShipCountry" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipZip" Type="numeric" Nullable="false" Precision="5" />
+          <Property Name="BillStreet" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BillCity" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BillST" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="BillCountry" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BillZip" Type="numeric" Nullable="false" Precision="5" />
+          <Property Name="BillingAddress" Type="int" Nullable="false" />
+          <Property Name="CreditCard" Type="numeric" Nullable="false" Precision="12" />
+          <Property Name="BookPrice" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="ExtendedPrice" Type="numeric" Precision="21" Scale="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'jnolan.dbo.CustomerHistory' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CustomerHistory">
+          <Key>
+            <PropertyRef Name="DatePurchased" />
+            <PropertyRef Name="BookTitle" />
+            <PropertyRef Name="ShipStreet" />
+            <PropertyRef Name="ShipCity" />
+            <PropertyRef Name="ShipST" />
+            <PropertyRef Name="ShipCountry" />
+            <PropertyRef Name="ShipZip" />
+            <PropertyRef Name="BillStreet" />
+            <PropertyRef Name="BillCity" />
+            <PropertyRef Name="BillST" />
+            <PropertyRef Name="BillCountry" />
+            <PropertyRef Name="BillZip" />
+            <PropertyRef Name="BillingAddress" />
+            <PropertyRef Name="CreditCard" />
+          </Key>
+          <Property Name="DatePurchased" Type="date" Nullable="false" />
+          <Property Name="BookTitle" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipStreet" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipCity" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipST" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="ShipCountry" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="ShipZip" Type="numeric" Nullable="false" Precision="5" />
+          <Property Name="BillStreet" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BillCity" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BillST" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="BillCountry" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BillZip" Type="numeric" Nullable="false" Precision="5" />
+          <Property Name="BillingAddress" Type="int" Nullable="false" />
+          <Property Name="CreditCard" Type="numeric" Nullable="false" Precision="12" />
+          <Property Name="BookPrice" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="ExtendedPrice" Type="numeric" Precision="21" Scale="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'jnolan.dbo.CustomersView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CustomersView">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="ST" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="numeric" Precision="10" />
+          <Property Name="FirstName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="LastName" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="ST" Type="char" Nullable="false" MaxLength="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'jnolan.dbo.InventoryListView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="InventoryListView">
+          <Key>
+            <PropertyRef Name="BookID" />
+            <PropertyRef Name="ISBN" />
+            <PropertyRef Name="BookTitle" />
+            <PropertyRef Name="BookAuthor" />
+            <PropertyRef Name="PublisherName" />
+            <PropertyRef Name="CategoryName" />
+            <PropertyRef Name="QuantityOnHand" />
+            <PropertyRef Name="CopyrightDate" />
+            <PropertyRef Name="Cost" />
+          </Key>
+          <Property Name="BookID" Type="int" Nullable="false" />
+          <Property Name="ISBN" Type="numeric" Nullable="false" Precision="10" />
+          <Property Name="BookTitle" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BookAuthor" Type="char" Nullable="false" MaxLength="50" />
+          <Property Name="PublisherName" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="CategoryName" Type="char" Nullable="false" MaxLength="40" />
+          <Property Name="BookPrice" Type="numeric" Precision="8" Scale="2" />
+          <Property Name="QuantityOnHand" Type="numeric" Nullable="false" Precision="12" />
+          <Property Name="CopyrightDate" Type="numeric" Nullable="false" Precision="4" />
+          <Property Name="Cost" Type="numeric" Nullable="false" Precision="8" Scale="2" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'jnolan.dbo.Multicard' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="Multicard">
+          <Key>
+            <PropertyRef Name="Fname" />
+            <PropertyRef Name="Lname" />
+            <PropertyRef Name="CardType" />
+            <PropertyRef Name="CardNumber" />
+          </Key>
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Fname" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="Lname" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="Phone" Type="numeric" Precision="10" />
+          <Property Name="CardType" Type="char" Nullable="false" MaxLength="25" />
+          <Property Name="CardNumber" Type="numeric" Nullable="false" Precision="12" />
+        </EntityType>
+        <Association Name="Book_CatFK">
+          <End Role="CATEGORY" Type="jnolanModel.Store.CATEGORY" Multiplicity="1" />
+          <End Role="BOOKS" Type="jnolanModel.Store.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORY">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Book_PubFK">
+          <End Role="PUBLISHER" Type="jnolanModel.Store.PUBLISHER" Multiplicity="1" />
+          <End Role="BOOKS" Type="jnolanModel.Store.BOOKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHER">
+              <PropertyRef Name="Publisher_ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="Publisher_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cart_BookIDFK">
+          <End Role="BOOKS" Type="jnolanModel.Store.BOOKS" Multiplicity="1" />
+          <End Role="SHOPPING_CART" Type="jnolanModel.Store.SHOPPING_CART" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOKS">
+              <PropertyRef Name="BookID" />
+            </Principal>
+            <Dependent Role="SHOPPING_CART">
+              <PropertyRef Name="BookID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cart_CIDFK">
+          <End Role="CUSTOMERS" Type="jnolanModel.Store.CUSTOMERS" Multiplicity="1" />
+          <End Role="SHOPPING_CART" Type="jnolanModel.Store.SHOPPING_CART" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMERS">
+              <PropertyRef Name="CID" />
+            </Principal>
+            <Dependent Role="SHOPPING_CART">
+              <PropertyRef Name="CID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CB_Billing_IDFK">
+          <End Role="BILLING_ADDRESS" Type="jnolanModel.Store.BILLING_ADDRESS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CUSTOMERS_BILLING_ADDRESS" Type="jnolanModel.Store.CUSTOMERS_BILLING_ADDRESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BILLING_ADDRESS">
+              <PropertyRef Name="Billing_ID" />
+            </Principal>
+            <Dependent Role="CUSTOMERS_BILLING_ADDRESS">
+              <PropertyRef Name="Billing_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CB_CIDFK">
+          <End Role="CUSTOMERS" Type="jnolanModel.Store.CUSTOMERS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CUSTOMERS_BILLING_ADDRESS" Type="jnolanModel.Store.CUSTOMERS_BILLING_ADDRESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMERS">
+              <PropertyRef Name="CID" />
+            </Principal>
+            <Dependent Role="CUSTOMERS_BILLING_ADDRESS">
+              <PropertyRef Name="CID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ContactFK">
+          <End Role="PUBLISHER" Type="jnolanModel.Store.PUBLISHER" Multiplicity="1" />
+          <End Role="CONTACT" Type="jnolanModel.Store.CONTACT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHER">
+              <PropertyRef Name="Publisher_ID" />
+            </Principal>
+            <Dependent Role="CONTACT">
+              <PropertyRef Name="Publisher_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CS_CIDFK">
+          <End Role="CUSTOMERS" Type="jnolanModel.Store.CUSTOMERS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CUSTOMERS_SHIPPING_ADDRESS" Type="jnolanModel.Store.CUSTOMERS_SHIPPING_ADDRESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMERS">
+              <PropertyRef Name="CID" />
+            </Principal>
+            <Dependent Role="CUSTOMERS_SHIPPING_ADDRESS">
+              <PropertyRef Name="CID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CS_SH_Add_IDFK">
+          <End Role="SHIPPING_ADDRESS" Type="jnolanModel.Store.SHIPPING_ADDRESS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="CUSTOMERS_SHIPPING_ADDRESS" Type="jnolanModel.Store.CUSTOMERS_SHIPPING_ADDRESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SHIPPING_ADDRESS">
+              <PropertyRef Name="SH_Add_ID" />
+            </Principal>
+            <Dependent Role="CUSTOMERS_SHIPPING_ADDRESS">
+              <PropertyRef Name="SH_Add_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CUSTOMER_CCARDFK">
+          <End Role="CUSTOMERS" Type="jnolanModel.Store.CUSTOMERS" Multiplicity="1" />
+          <End Role="CUSTOMER_CCARD" Type="jnolanModel.Store.CUSTOMER_CCARD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMERS">
+              <PropertyRef Name="CID" />
+            </Principal>
+            <Dependent Role="CUSTOMER_CCARD">
+              <PropertyRef Name="CID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CUSTOMER_CCARDFK2">
+          <End Role="CCARD" Type="jnolanModel.Store.CCARD" Multiplicity="1" />
+          <End Role="CUSTOMER_CCARD" Type="jnolanModel.Store.CUSTOMER_CCARD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CCARD">
+              <PropertyRef Name="CCARDID" />
+            </Principal>
+            <Dependent Role="CUSTOMER_CCARD">
+              <PropertyRef Name="CCardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="InvoiceFK">
+          <End Role="SHOPPING_CART" Type="jnolanModel.Store.SHOPPING_CART" Multiplicity="1" />
+          <End Role="INVOICE" Type="jnolanModel.Store.INVOICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SHOPPING_CART">
+              <PropertyRef Name="Record_ID" />
+            </Principal>
+            <Dependent Role="INVOICE">
+              <PropertyRef Name="Record_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="InvoiceFK2">
+          <End Role="CUSTOMER_CCARD" Type="jnolanModel.Store.CUSTOMER_CCARD" Multiplicity="1" />
+          <End Role="INVOICE" Type="jnolanModel.Store.INVOICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMER_CCARD">
+              <PropertyRef Name="CUSTOMER_CCARD_ID" />
+            </Principal>
+            <Dependent Role="INVOICE">
+              <PropertyRef Name="CUSTOMER_CCARD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Order_DetailFK">
+          <End Role="ORDERR" Type="jnolanModel.Store.ORDERR" Multiplicity="1" />
+          <End Role="ORDER_DETAIL" Type="jnolanModel.Store.ORDER_DETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ORDERR">
+              <PropertyRef Name="Order_ID" />
+            </Principal>
+            <Dependent Role="ORDER_DETAIL">
+              <PropertyRef Name="Order_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Pub_Pub_AddFK">
+          <End Role="PUBLISHER" Type="jnolanModel.Store.PUBLISHER" Multiplicity="1" />
+          <End Role="PUB_ADDRESS" Type="jnolanModel.Store.PUB_ADDRESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHER">
+              <PropertyRef Name="Publisher_ID" />
+            </Principal>
+            <Dependent Role="PUB_ADDRESS">
+              <PropertyRef Name="Publisher_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="CustomerReport" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LName" Type="char" Mode="In" />
+          <Parameter Name="FName" Type="char" Mode="In" />
+          <Parameter Name="Pword" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="DeleteShopping_Cart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Cart_ID" Type="int" Mode="In" />
+          <Parameter Name="BookID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="InsertAdmin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NewLName" Type="char" Mode="In" />
+          <Parameter Name="NewFName" Type="char" Mode="In" />
+          <Parameter Name="NewPword" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="InsertBillingAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Pword" Type="varchar" Mode="In" />
+          <Parameter Name="NewStreet" Type="char" Mode="In" />
+          <Parameter Name="NewCity" Type="char" Mode="In" />
+          <Parameter Name="NewState" Type="char" Mode="In" />
+          <Parameter Name="NewCountry" Type="char" Mode="In" />
+          <Parameter Name="NewZip" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="InsertBooks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LName" Type="char" Mode="In" />
+          <Parameter Name="FName" Type="char" Mode="In" />
+          <Parameter Name="Pword" Type="numeric" Mode="In" />
+          <Parameter Name="CategoryName" Type="char" Mode="In" />
+          <Parameter Name="Publisher_Name" Type="char" Mode="In" />
+          <Parameter Name="NewIsbn" Type="numeric" Mode="In" />
+          <Parameter Name="NewTitle" Type="char" Mode="In" />
+          <Parameter Name="NewAuthor" Type="char" Mode="In" />
+          <Parameter Name="NewPrice" Type="numeric" Mode="In" />
+          <Parameter Name="NewQuantity" Type="numeric" Mode="In" />
+          <Parameter Name="NewCopyDate" Type="numeric" Mode="In" />
+          <Parameter Name="NewCost" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="InsertCategory" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LName" Type="char" Mode="In" />
+          <Parameter Name="FName" Type="char" Mode="In" />
+          <Parameter Name="Pword" Type="numeric" Mode="In" />
+          <Parameter Name="NewCategoryName" Type="char" Mode="In" />
+        </Function>
+        <Function Name="InsertCCARD" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Pword" Type="varchar" Mode="In" />
+          <Parameter Name="NewCardType" Type="char" Mode="In" />
+          <Parameter Name="NewCCardNumber" Type="numeric" Mode="In" />
+          <Parameter Name="NewccardLName" Type="char" Mode="In" />
+          <Parameter Name="NewccardFName" Type="char" Mode="In" />
+          <Parameter Name="NewExpirationDate" Type="numeric" Mode="In" />
+          <Parameter Name="NewSecurityCode" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="InsertCustomer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NewCustomersEmail" Type="varchar" Mode="In" />
+          <Parameter Name="NewCustomersPword" Type="varchar" Mode="In" />
+          <Parameter Name="NewCustomersLName" Type="char" Mode="In" />
+          <Parameter Name="NewCustomersFName" Type="char" Mode="In" />
+          <Parameter Name="NewCustomersGender" Type="char" Mode="In" />
+          <Parameter Name="NewCustomersHPhone" Type="numeric" Mode="In" />
+          <Parameter Name="NewCustomersWPhone" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="InsertInvoice" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="NewCart_ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="InsertP_B" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LName" Type="char" Mode="In" />
+          <Parameter Name="FName" Type="char" Mode="In" />
+          <Parameter Name="Pword" Type="numeric" Mode="In" />
+          <Parameter Name="CategoryName" Type="char" Mode="In" />
+          <Parameter Name="NewPublisher_Name" Type="char" Mode="In" />
+          <Parameter Name="NewIsbn" Type="numeric" Mode="In" />
+          <Parameter Name="NewTitle" Type="char" Mode="In" />
+          <Parameter Name="NewAuthor" Type="char" Mode="In" />
+          <Parameter Name="NewPrice" Type="numeric" Mode="In" />
+          <Parameter Name="NewQuantity" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="InsertPubAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LName" Type="char" Mode="In" />
+          <Parameter Name="FName" Type="char" Mode="In" />
+          <Parameter Name="Pword" Type="numeric" Mode="In" />
+          <Parameter Name="Publisher_Name" Type="char" Mode="In" />
+          <Parameter Name="NewStreet" Type="char" Mode="In" />
+          <Parameter Name="NewCity" Type="char" Mode="In" />
+          <Parameter Name="NewST" Type="char" Mode="In" />
+          <Parameter Name="NewCountry" Type="char" Mode="In" />
+          <Parameter Name="NewZip" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="InsertPubContact" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LName" Type="char" Mode="In" />
+          <Parameter Name="FName" Type="char" Mode="In" />
+          <Parameter Name="Pword" Type="numeric" Mode="In" />
+          <Parameter Name="Publisher_Name" Type="char" Mode="In" />
+          <Parameter Name="NewFName" Type="char" Mode="In" />
+          <Parameter Name="NewLName" Type="char" Mode="In" />
+          <Parameter Name="NewPhone" Type="numeric" Mode="In" />
+          <Parameter Name="NewEmail" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="InsertPublisher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LName" Type="char" Mode="In" />
+          <Parameter Name="FName" Type="char" Mode="In" />
+          <Parameter Name="Pword" Type="numeric" Mode="In" />
+          <Parameter Name="NewPublisher_Name" Type="char" Mode="In" />
+        </Function>
+        <Function Name="InsertShippingAddress" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+          <Parameter Name="Pword" Type="varchar" Mode="In" />
+          <Parameter Name="NewStreet" Type="char" Mode="In" />
+          <Parameter Name="NewCity" Type="char" Mode="In" />
+          <Parameter Name="NewState" Type="char" Mode="In" />
+          <Parameter Name="NewCountry" Type="char" Mode="In" />
+          <Parameter Name="NewZip" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="InsertShopping_Cart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CID" Type="int" Mode="In" />
+          <Parameter Name="BookID" Type="int" Mode="In" />
+          <Parameter Name="NewQuantity" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="Search" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SearchType" Type="char" Mode="In" />
+          <Parameter Name="Isbn" Type="numeric" Mode="In" />
+          <Parameter Name="Title" Type="char" Mode="In" />
+          <Parameter Name="Author" Type="char" Mode="In" />
+          <Parameter Name="MaxPrice" Type="numeric" Mode="In" />
+          <Parameter Name="PubName" Type="char" Mode="In" />
+          <Parameter Name="CatName" Type="char" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="UpdateBooks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="LName" Type="char" Mode="In" />
+          <Parameter Name="FName" Type="char" Mode="In" />
+          <Parameter Name="Pword" Type="numeric" Mode="In" />
+          <Parameter Name="BookID" Type="int" Mode="In" />
+          <Parameter Name="CategoryName" Type="char" Mode="In" />
+          <Parameter Name="Publisher_Name" Type="char" Mode="In" />
+          <Parameter Name="NewIsbn" Type="numeric" Mode="In" />
+          <Parameter Name="NewTitle" Type="char" Mode="In" />
+          <Parameter Name="NewAuthor" Type="char" Mode="In" />
+          <Parameter Name="NewPrice" Type="numeric" Mode="In" />
+          <Parameter Name="NewQuantity" Type="numeric" Mode="In" />
+          <Parameter Name="NewCopyDate" Type="numeric" Mode="In" />
+          <Parameter Name="NewCost" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="UpdateCustomers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CID" Type="int" Mode="In" />
+          <Parameter Name="NewCustomersEmail" Type="varchar" Mode="In" />
+          <Parameter Name="NewCustomersPword" Type="varchar" Mode="In" />
+          <Parameter Name="NewCustomersLName" Type="char" Mode="In" />
+          <Parameter Name="NewCustomersFName" Type="char" Mode="In" />
+          <Parameter Name="NewCustomersGender" Type="char" Mode="In" />
+          <Parameter Name="NewCustomersHPhone" Type="numeric" Mode="In" />
+          <Parameter Name="NewCustomersWPhone" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="UpdateShopping_Cart" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CID" Type="int" Mode="In" />
+          <Parameter Name="BookID" Type="int" Mode="In" />
+          <Parameter Name="NewQuantity" Type="numeric" Mode="In" />
+        </Function>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="jnolanModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="jnolanEntities6" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="ADMINISTRATORs" EntityType="jnolanModel.ADMINISTRATOR" />
+          <EntitySet Name="BILLING_ADDRESS" EntityType="jnolanModel.BILLING_ADDRESS" />
+          <EntitySet Name="BOOKS" EntityType="jnolanModel.BOOK" />
+          <EntitySet Name="CATEGORies" EntityType="jnolanModel.CATEGORY" />
+          <EntitySet Name="CCARDs" EntityType="jnolanModel.CCARD" />
+          <EntitySet Name="CONTACTs" EntityType="jnolanModel.CONTACT" />
+          <EntitySet Name="CUSTOMERs" EntityType="jnolanModel.CUSTOMER" />
+          <EntitySet Name="CUSTOMER_CCARD" EntityType="jnolanModel.CUSTOMER_CCARD" />
+          <EntitySet Name="CUSTOMERS1" EntityType="jnolanModel.CUSTOMER1" />
+          <EntitySet Name="INVOICEs" EntityType="jnolanModel.INVOICE" />
+          <EntitySet Name="ORDER_DETAIL" EntityType="jnolanModel.ORDER_DETAIL" />
+          <EntitySet Name="ORDERRs" EntityType="jnolanModel.ORDERR" />
+          <EntitySet Name="PUB_ADDRESS" EntityType="jnolanModel.PUB_ADDRESS" />
+          <EntitySet Name="PUBLISHERs" EntityType="jnolanModel.PUBLISHER" />
+          <EntitySet Name="SERVICEs" EntityType="jnolanModel.SERVICE" />
+          <EntitySet Name="SHIPPING_ADDRESS" EntityType="jnolanModel.SHIPPING_ADDRESS" />
+          <EntitySet Name="SHOPPING_CART" EntityType="jnolanModel.SHOPPING_CART" />
+          <EntitySet Name="sysdiagrams" EntityType="jnolanModel.sysdiagram" />
+          <EntitySet Name="SystemUsers" EntityType="jnolanModel.SystemUser" />
+          <EntitySet Name="AllCustomerHistories" EntityType="jnolanModel.AllCustomerHistory" />
+          <EntitySet Name="CheckoutButtons" EntityType="jnolanModel.CheckoutButton" />
+          <EntitySet Name="CustomerHistories" EntityType="jnolanModel.CustomerHistory" />
+          <EntitySet Name="CustomersViews" EntityType="jnolanModel.CustomersView" />
+          <EntitySet Name="InventoryListViews" EntityType="jnolanModel.InventoryListView" />
+          <EntitySet Name="Multicards" EntityType="jnolanModel.Multicard" />
+          <AssociationSet Name="Book_CatFK" Association="jnolanModel.Book_CatFK">
+            <End Role="CATEGORY" EntitySet="CATEGORies" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="Book_PubFK" Association="jnolanModel.Book_PubFK">
+            <End Role="PUBLISHER" EntitySet="PUBLISHERs" />
+            <End Role="BOOKS" EntitySet="BOOKS" />
+          </AssociationSet>
+          <AssociationSet Name="Cart_BookIDFK" Association="jnolanModel.Cart_BookIDFK">
+            <End Role="BOOKS" EntitySet="BOOKS" />
+            <End Role="SHOPPING_CART" EntitySet="SHOPPING_CART" />
+          </AssociationSet>
+          <AssociationSet Name="CUSTOMER_CCARDFK2" Association="jnolanModel.CUSTOMER_CCARDFK2">
+            <End Role="CCARD" EntitySet="CCARDs" />
+            <End Role="CUSTOMER_CCARD" EntitySet="CUSTOMER_CCARD" />
+          </AssociationSet>
+          <AssociationSet Name="ContactFK" Association="jnolanModel.ContactFK">
+            <End Role="PUBLISHER" EntitySet="PUBLISHERs" />
+            <End Role="CONTACT" EntitySet="CONTACTs" />
+          </AssociationSet>
+          <AssociationSet Name="CUSTOMER_CCARDFK" Association="jnolanModel.CUSTOMER_CCARDFK">
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS1" />
+            <End Role="CUSTOMER_CCARD" EntitySet="CUSTOMER_CCARD" />
+          </AssociationSet>
+          <AssociationSet Name="InvoiceFK2" Association="jnolanModel.InvoiceFK2">
+            <End Role="CUSTOMER_CCARD" EntitySet="CUSTOMER_CCARD" />
+            <End Role="INVOICE" EntitySet="INVOICEs" />
+          </AssociationSet>
+          <AssociationSet Name="Cart_CIDFK" Association="jnolanModel.Cart_CIDFK">
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS1" />
+            <End Role="SHOPPING_CART" EntitySet="SHOPPING_CART" />
+          </AssociationSet>
+          <AssociationSet Name="InvoiceFK" Association="jnolanModel.InvoiceFK">
+            <End Role="SHOPPING_CART" EntitySet="SHOPPING_CART" />
+            <End Role="INVOICE" EntitySet="INVOICEs" />
+          </AssociationSet>
+          <AssociationSet Name="Order_DetailFK" Association="jnolanModel.Order_DetailFK">
+            <End Role="ORDERR" EntitySet="ORDERRs" />
+            <End Role="ORDER_DETAIL" EntitySet="ORDER_DETAIL" />
+          </AssociationSet>
+          <AssociationSet Name="Pub_Pub_AddFK" Association="jnolanModel.Pub_Pub_AddFK">
+            <End Role="PUBLISHER" EntitySet="PUBLISHERs" />
+            <End Role="PUB_ADDRESS" EntitySet="PUB_ADDRESS" />
+          </AssociationSet>
+          <AssociationSet Name="CUSTOMERS_BILLING_ADDRESS" Association="jnolanModel.CUSTOMERS_BILLING_ADDRESS">
+            <End Role="BILLING_ADDRESS" EntitySet="BILLING_ADDRESS" />
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS1" />
+          </AssociationSet>
+          <AssociationSet Name="CUSTOMERS_SHIPPING_ADDRESS" Association="jnolanModel.CUSTOMERS_SHIPPING_ADDRESS">
+            <End Role="CUSTOMERS" EntitySet="CUSTOMERS1" />
+            <End Role="SHIPPING_ADDRESS" EntitySet="SHIPPING_ADDRESS" />
+          </AssociationSet>
+          <FunctionImport Name="CustomerReport">
+            <Parameter Name="LName" Mode="In" Type="String" />
+            <Parameter Name="FName" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteShopping_Cart">
+            <Parameter Name="Cart_ID" Mode="In" Type="Int32" />
+            <Parameter Name="BookID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="InsertAdmin">
+            <Parameter Name="NewLName" Mode="In" Type="String" />
+            <Parameter Name="NewFName" Mode="In" Type="String" />
+            <Parameter Name="NewPword" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="InsertBillingAddress" ReturnType="Collection(String)">
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="String" />
+            <Parameter Name="NewStreet" Mode="In" Type="String" />
+            <Parameter Name="NewCity" Mode="In" Type="String" />
+            <Parameter Name="NewState" Mode="In" Type="String" />
+            <Parameter Name="NewCountry" Mode="In" Type="String" />
+            <Parameter Name="NewZip" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="InsertBooks">
+            <Parameter Name="LName" Mode="In" Type="String" />
+            <Parameter Name="FName" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="Decimal" />
+            <Parameter Name="CategoryName" Mode="In" Type="String" />
+            <Parameter Name="Publisher_Name" Mode="In" Type="String" />
+            <Parameter Name="NewIsbn" Mode="In" Type="Decimal" />
+            <Parameter Name="NewTitle" Mode="In" Type="String" />
+            <Parameter Name="NewAuthor" Mode="In" Type="String" />
+            <Parameter Name="NewPrice" Mode="In" Type="Decimal" />
+            <Parameter Name="NewQuantity" Mode="In" Type="Decimal" />
+            <Parameter Name="NewCopyDate" Mode="In" Type="Decimal" />
+            <Parameter Name="NewCost" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="InsertCategory">
+            <Parameter Name="LName" Mode="In" Type="String" />
+            <Parameter Name="FName" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="Decimal" />
+            <Parameter Name="NewCategoryName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InsertCCARD" ReturnType="Collection(String)">
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="String" />
+            <Parameter Name="NewCardType" Mode="In" Type="String" />
+            <Parameter Name="NewCCardNumber" Mode="In" Type="Decimal" />
+            <Parameter Name="NewccardLName" Mode="In" Type="String" />
+            <Parameter Name="NewccardFName" Mode="In" Type="String" />
+            <Parameter Name="NewExpirationDate" Mode="In" Type="Decimal" />
+            <Parameter Name="NewSecurityCode" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="InsertCustomer">
+            <Parameter Name="NewCustomersEmail" Mode="In" Type="String" />
+            <Parameter Name="NewCustomersPword" Mode="In" Type="String" />
+            <Parameter Name="NewCustomersLName" Mode="In" Type="String" />
+            <Parameter Name="NewCustomersFName" Mode="In" Type="String" />
+            <Parameter Name="NewCustomersGender" Mode="In" Type="String" />
+            <Parameter Name="NewCustomersHPhone" Mode="In" Type="Decimal" />
+            <Parameter Name="NewCustomersWPhone" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="InsertInvoice">
+            <Parameter Name="NewCart_ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="InsertP_B">
+            <Parameter Name="LName" Mode="In" Type="String" />
+            <Parameter Name="FName" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="Decimal" />
+            <Parameter Name="CategoryName" Mode="In" Type="String" />
+            <Parameter Name="NewPublisher_Name" Mode="In" Type="String" />
+            <Parameter Name="NewIsbn" Mode="In" Type="Decimal" />
+            <Parameter Name="NewTitle" Mode="In" Type="String" />
+            <Parameter Name="NewAuthor" Mode="In" Type="String" />
+            <Parameter Name="NewPrice" Mode="In" Type="Decimal" />
+            <Parameter Name="NewQuantity" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="InsertPubAddress">
+            <Parameter Name="LName" Mode="In" Type="String" />
+            <Parameter Name="FName" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="Decimal" />
+            <Parameter Name="Publisher_Name" Mode="In" Type="String" />
+            <Parameter Name="NewStreet" Mode="In" Type="String" />
+            <Parameter Name="NewCity" Mode="In" Type="String" />
+            <Parameter Name="NewST" Mode="In" Type="String" />
+            <Parameter Name="NewCountry" Mode="In" Type="String" />
+            <Parameter Name="NewZip" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="InsertPubContact">
+            <Parameter Name="LName" Mode="In" Type="String" />
+            <Parameter Name="FName" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="Decimal" />
+            <Parameter Name="Publisher_Name" Mode="In" Type="String" />
+            <Parameter Name="NewFName" Mode="In" Type="String" />
+            <Parameter Name="NewLName" Mode="In" Type="String" />
+            <Parameter Name="NewPhone" Mode="In" Type="Decimal" />
+            <Parameter Name="NewEmail" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InsertPublisher">
+            <Parameter Name="LName" Mode="In" Type="String" />
+            <Parameter Name="FName" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="Decimal" />
+            <Parameter Name="NewPublisher_Name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InsertShippingAddress" ReturnType="Collection(String)">
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="String" />
+            <Parameter Name="NewStreet" Mode="In" Type="String" />
+            <Parameter Name="NewCity" Mode="In" Type="String" />
+            <Parameter Name="NewState" Mode="In" Type="String" />
+            <Parameter Name="NewCountry" Mode="In" Type="String" />
+            <Parameter Name="NewZip" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="InsertShopping_Cart">
+            <Parameter Name="CID" Mode="In" Type="Int32" />
+            <Parameter Name="BookID" Mode="In" Type="Int32" />
+            <Parameter Name="NewQuantity" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="Search" ReturnType="Collection(jnolanModel.Search_Result)">
+            <Parameter Name="SearchType" Mode="In" Type="String" />
+            <Parameter Name="Isbn" Mode="In" Type="Decimal" />
+            <Parameter Name="Title" Mode="In" Type="String" />
+            <Parameter Name="Author" Mode="In" Type="String" />
+            <Parameter Name="MaxPrice" Mode="In" Type="Decimal" />
+            <Parameter Name="PubName" Mode="In" Type="String" />
+            <Parameter Name="CatName" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="UpdateBooks">
+            <Parameter Name="LName" Mode="In" Type="String" />
+            <Parameter Name="FName" Mode="In" Type="String" />
+            <Parameter Name="Pword" Mode="In" Type="Decimal" />
+            <Parameter Name="BookID" Mode="In" Type="Int32" />
+            <Parameter Name="CategoryName" Mode="In" Type="String" />
+            <Parameter Name="Publisher_Name" Mode="In" Type="String" />
+            <Parameter Name="NewIsbn" Mode="In" Type="Decimal" />
+            <Parameter Name="NewTitle" Mode="In" Type="String" />
+            <Parameter Name="NewAuthor" Mode="In" Type="String" />
+            <Parameter Name="NewPrice" Mode="In" Type="Decimal" />
+            <Parameter Name="NewQuantity" Mode="In" Type="Decimal" />
+            <Parameter Name="NewCopyDate" Mode="In" Type="Decimal" />
+            <Parameter Name="NewCost" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateCustomers">
+            <Parameter Name="CID" Mode="In" Type="Int32" />
+            <Parameter Name="NewCustomersEmail" Mode="In" Type="String" />
+            <Parameter Name="NewCustomersPword" Mode="In" Type="String" />
+            <Parameter Name="NewCustomersLName" Mode="In" Type="String" />
+            <Parameter Name="NewCustomersFName" Mode="In" Type="String" />
+            <Parameter Name="NewCustomersGender" Mode="In" Type="String" />
+            <Parameter Name="NewCustomersHPhone" Mode="In" Type="Decimal" />
+            <Parameter Name="NewCustomersWPhone" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="UpdateShopping_Cart">
+            <Parameter Name="CID" Mode="In" Type="Int32" />
+            <Parameter Name="BookID" Mode="In" Type="Int32" />
+            <Parameter Name="NewQuantity" Mode="In" Type="Decimal" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="ADMINISTRATOR">
+          <Key>
+            <PropertyRef Name="AdminID" />
+          </Key>
+          <Property Name="AdminID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="LName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="FName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="Pword" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="LoginStatus" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="BILLING_ADDRESS">
+          <Key>
+            <PropertyRef Name="Billing_ID" />
+          </Key>
+          <Property Name="Billing_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Street" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ST" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="Zip" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <NavigationProperty Name="CUSTOMERS" Relationship="jnolanModel.CUSTOMERS_BILLING_ADDRESS" FromRole="BILLING_ADDRESS" ToRole="CUSTOMERS" />
+        </EntityType>
+        <EntityType Name="BOOK">
+          <Key>
+            <PropertyRef Name="BookID" />
+          </Key>
+          <Property Name="BookID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Isbn" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="Author" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="Price" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="Quantity" Type="Decimal" Nullable="false" Precision="12" Scale="0" />
+          <Property Name="Publisher_ID" Type="Int32" Nullable="false" />
+          <Property Name="Category_ID" Type="Int32" Nullable="false" />
+          <Property Name="CopyDate" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+          <NavigationProperty Name="CATEGORY" Relationship="jnolanModel.Book_CatFK" FromRole="BOOKS" ToRole="CATEGORY" />
+          <NavigationProperty Name="PUBLISHER" Relationship="jnolanModel.Book_PubFK" FromRole="BOOKS" ToRole="PUBLISHER" />
+          <NavigationProperty Name="SHOPPING_CART" Relationship="jnolanModel.Cart_BookIDFK" FromRole="BOOKS" ToRole="SHOPPING_CART" />
+        </EntityType>
+        <EntityType Name="CATEGORY">
+          <Key>
+            <PropertyRef Name="Category_ID" />
+          </Key>
+          <Property Name="Category_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="BOOKS" Relationship="jnolanModel.Book_CatFK" FromRole="CATEGORY" ToRole="BOOKS" />
+        </EntityType>
+        <EntityType Name="CCARD">
+          <Key>
+            <PropertyRef Name="CCARDID" />
+          </Key>
+          <Property Name="CCARDID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CardType" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="CCardNumber" Type="Decimal" Nullable="false" Precision="12" Scale="0" />
+          <Property Name="LName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="FName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="ExpirationDate" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="SecurityCode" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+          <NavigationProperty Name="CUSTOMER_CCARD" Relationship="jnolanModel.CUSTOMER_CCARDFK2" FromRole="CCARD" ToRole="CUSTOMER_CCARD" />
+        </EntityType>
+        <EntityType Name="CONTACT">
+          <Key>
+            <PropertyRef Name="Contact_ID" />
+          </Key>
+          <Property Name="Contact_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="LName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="FName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="Phone" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Publisher_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PUBLISHER" Relationship="jnolanModel.ContactFK" FromRole="CONTACT" ToRole="PUBLISHER" />
+        </EntityType>
+        <EntityType Name="CUSTOMER">
+          <Key>
+            <PropertyRef Name="CustomerID" />
+          </Key>
+          <Property Name="CustomerID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="true" />
+          <Property Name="Username" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Pword" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="CUSTOMER_CCARD">
+          <Key>
+            <PropertyRef Name="CUSTOMER_CCARD_ID" />
+          </Key>
+          <Property Name="CUSTOMER_CCARD_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CID" Type="Int32" Nullable="false" />
+          <Property Name="CCardID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CCARD" Relationship="jnolanModel.CUSTOMER_CCARDFK2" FromRole="CUSTOMER_CCARD" ToRole="CCARD" />
+          <NavigationProperty Name="CUSTOMER" Relationship="jnolanModel.CUSTOMER_CCARDFK" FromRole="CUSTOMER_CCARD" ToRole="CUSTOMERS" />
+          <NavigationProperty Name="INVOICEs" Relationship="jnolanModel.InvoiceFK2" FromRole="CUSTOMER_CCARD" ToRole="INVOICE" />
+        </EntityType>
+        <EntityType Name="CUSTOMER1">
+          <Key>
+            <PropertyRef Name="CID" />
+          </Key>
+          <Property Name="CID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="LName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="FName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="Gender" Type="String" MaxLength="10" Unicode="false" FixedLength="true" />
+          <Property Name="HPhone" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="WPhone" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Pword" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="LoginStatus" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="CUSTOMER_CCARD" Relationship="jnolanModel.CUSTOMER_CCARDFK" FromRole="CUSTOMERS" ToRole="CUSTOMER_CCARD" />
+          <NavigationProperty Name="SHOPPING_CART" Relationship="jnolanModel.Cart_CIDFK" FromRole="CUSTOMERS" ToRole="SHOPPING_CART" />
+          <NavigationProperty Name="BILLING_ADDRESS" Relationship="jnolanModel.CUSTOMERS_BILLING_ADDRESS" FromRole="CUSTOMERS" ToRole="BILLING_ADDRESS" />
+          <NavigationProperty Name="SHIPPING_ADDRESS" Relationship="jnolanModel.CUSTOMERS_SHIPPING_ADDRESS" FromRole="CUSTOMERS" ToRole="SHIPPING_ADDRESS" />
+        </EntityType>
+        <EntityType Name="INVOICE">
+          <Key>
+            <PropertyRef Name="Invoice_ID" />
+          </Key>
+          <Property Name="Invoice_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Date_Of_Purchase" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Record_ID" Type="Int32" Nullable="false" />
+          <Property Name="BookID" Type="Int32" Nullable="false" />
+          <Property Name="CUSTOMER_CCARD_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="CUSTOMER_CCARD" Relationship="jnolanModel.InvoiceFK2" FromRole="INVOICE" ToRole="CUSTOMER_CCARD" />
+          <NavigationProperty Name="SHOPPING_CART" Relationship="jnolanModel.InvoiceFK" FromRole="INVOICE" ToRole="SHOPPING_CART" />
+        </EntityType>
+        <EntityType Name="ORDER_DETAIL">
+          <Key>
+            <PropertyRef Name="OrderDetail_ID" />
+          </Key>
+          <Property Name="OrderDetail_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Order_ID" Type="Int32" Nullable="false" />
+          <Property Name="BookID" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+          <NavigationProperty Name="ORDERR" Relationship="jnolanModel.Order_DetailFK" FromRole="ORDER_DETAIL" ToRole="ORDERR" />
+        </EntityType>
+        <EntityType Name="ORDERR">
+          <Key>
+            <PropertyRef Name="Order_ID" />
+          </Key>
+          <Property Name="Order_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ST" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PostalCode" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="Phone" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="DateOfOrder" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="ORDER_DETAIL" Relationship="jnolanModel.Order_DetailFK" FromRole="ORDERR" ToRole="ORDER_DETAIL" />
+        </EntityType>
+        <EntityType Name="PUB_ADDRESS">
+          <Key>
+            <PropertyRef Name="Pub_Add_ID" />
+          </Key>
+          <Property Name="Pub_Add_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Street" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ST" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="Zip" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="Publisher_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="PUBLISHER" Relationship="jnolanModel.Pub_Pub_AddFK" FromRole="PUB_ADDRESS" ToRole="PUBLISHER" />
+        </EntityType>
+        <EntityType Name="PUBLISHER">
+          <Key>
+            <PropertyRef Name="Publisher_ID" />
+          </Key>
+          <Property Name="Publisher_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Publisher_Name" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <NavigationProperty Name="BOOKS" Relationship="jnolanModel.Book_PubFK" FromRole="PUBLISHER" ToRole="BOOKS" />
+          <NavigationProperty Name="CONTACTs" Relationship="jnolanModel.ContactFK" FromRole="PUBLISHER" ToRole="CONTACT" />
+          <NavigationProperty Name="PUB_ADDRESS" Relationship="jnolanModel.Pub_Pub_AddFK" FromRole="PUBLISHER" ToRole="PUB_ADDRESS" />
+        </EntityType>
+        <EntityType Name="SERVICE">
+          <Key>
+            <PropertyRef Name="Service1" />
+          </Key>
+          <Property Name="Service1" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="UnitPrice" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+        </EntityType>
+        <EntityType Name="SHIPPING_ADDRESS">
+          <Key>
+            <PropertyRef Name="SH_Add_ID" />
+          </Key>
+          <Property Name="SH_Add_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Street" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="City" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ST" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="Country" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="Zip" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <NavigationProperty Name="CUSTOMERS" Relationship="jnolanModel.CUSTOMERS_SHIPPING_ADDRESS" FromRole="SHIPPING_ADDRESS" ToRole="CUSTOMERS" />
+        </EntityType>
+        <EntityType Name="SHOPPING_CART">
+          <Key>
+            <PropertyRef Name="Record_ID" />
+          </Key>
+          <Property Name="Record_ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Cart_ID" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="CartStatus" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+          <Property Name="BookID" Type="Int32" Nullable="false" />
+          <Property Name="CID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="BOOK" Relationship="jnolanModel.Cart_BookIDFK" FromRole="SHOPPING_CART" ToRole="BOOKS" />
+          <NavigationProperty Name="CUSTOMER" Relationship="jnolanModel.Cart_CIDFK" FromRole="SHOPPING_CART" ToRole="CUSTOMERS" />
+          <NavigationProperty Name="INVOICEs" Relationship="jnolanModel.InvoiceFK" FromRole="SHOPPING_CART" ToRole="INVOICE" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SystemUser">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="AllCustomerHistory">
+          <Key>
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="Lastname" />
+            <PropertyRef Name="DatePurchased" />
+            <PropertyRef Name="BookTitle" />
+            <PropertyRef Name="ShipStreet" />
+            <PropertyRef Name="ShipCity" />
+            <PropertyRef Name="ShipST" />
+            <PropertyRef Name="ShipCountry" />
+            <PropertyRef Name="ShipZip" />
+            <PropertyRef Name="BillStreet" />
+            <PropertyRef Name="BillCity" />
+            <PropertyRef Name="BillST" />
+            <PropertyRef Name="BillCountry" />
+            <PropertyRef Name="BillZip" />
+            <PropertyRef Name="BillingAddress" />
+            <PropertyRef Name="CreditCard" />
+          </Key>
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="Lastname" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="DatePurchased" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="BookTitle" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipStreet" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipCity" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipST" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="ShipCountry" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipZip" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="BillStreet" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BillCity" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BillST" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="BillCountry" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BillZip" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="BillingAddress" Type="Int32" Nullable="false" />
+          <Property Name="CreditCard" Type="Decimal" Nullable="false" Precision="12" Scale="0" />
+          <Property Name="BookPrice" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="ExtendedPrice" Type="Decimal" Precision="21" Scale="2" />
+        </EntityType>
+        <EntityType Name="CheckoutButton">
+          <Key>
+            <PropertyRef Name="BookTitle" />
+            <PropertyRef Name="ShipStreet" />
+            <PropertyRef Name="ShipCity" />
+            <PropertyRef Name="ShipST" />
+            <PropertyRef Name="ShipCountry" />
+            <PropertyRef Name="ShipZip" />
+            <PropertyRef Name="BillStreet" />
+            <PropertyRef Name="BillCity" />
+            <PropertyRef Name="BillST" />
+            <PropertyRef Name="BillCountry" />
+            <PropertyRef Name="BillZip" />
+            <PropertyRef Name="BillingAddress" />
+            <PropertyRef Name="CreditCard" />
+          </Key>
+          <Property Name="BookTitle" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipStreet" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipCity" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipST" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="ShipCountry" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipZip" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="BillStreet" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BillCity" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BillST" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="BillCountry" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BillZip" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="BillingAddress" Type="Int32" Nullable="false" />
+          <Property Name="CreditCard" Type="Decimal" Nullable="false" Precision="12" Scale="0" />
+          <Property Name="BookPrice" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="ExtendedPrice" Type="Decimal" Precision="21" Scale="2" />
+        </EntityType>
+        <EntityType Name="CustomerHistory">
+          <Key>
+            <PropertyRef Name="DatePurchased" />
+            <PropertyRef Name="BookTitle" />
+            <PropertyRef Name="ShipStreet" />
+            <PropertyRef Name="ShipCity" />
+            <PropertyRef Name="ShipST" />
+            <PropertyRef Name="ShipCountry" />
+            <PropertyRef Name="ShipZip" />
+            <PropertyRef Name="BillStreet" />
+            <PropertyRef Name="BillCity" />
+            <PropertyRef Name="BillST" />
+            <PropertyRef Name="BillCountry" />
+            <PropertyRef Name="BillZip" />
+            <PropertyRef Name="BillingAddress" />
+            <PropertyRef Name="CreditCard" />
+          </Key>
+          <Property Name="DatePurchased" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="BookTitle" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipStreet" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipCity" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipST" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="ShipCountry" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="ShipZip" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="BillStreet" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BillCity" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BillST" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+          <Property Name="BillCountry" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BillZip" Type="Decimal" Nullable="false" Precision="5" Scale="0" />
+          <Property Name="BillingAddress" Type="Int32" Nullable="false" />
+          <Property Name="CreditCard" Type="Decimal" Nullable="false" Precision="12" Scale="0" />
+          <Property Name="BookPrice" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="ExtendedPrice" Type="Decimal" Precision="21" Scale="2" />
+        </EntityType>
+        <EntityType Name="CustomersView">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="FirstName" />
+            <PropertyRef Name="LastName" />
+            <PropertyRef Name="ST" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Phone" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="ST" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="InventoryListView">
+          <Key>
+            <PropertyRef Name="BookID" />
+            <PropertyRef Name="ISBN" />
+            <PropertyRef Name="BookTitle" />
+            <PropertyRef Name="BookAuthor" />
+            <PropertyRef Name="PublisherName" />
+            <PropertyRef Name="CategoryName" />
+            <PropertyRef Name="QuantityOnHand" />
+            <PropertyRef Name="CopyrightDate" />
+            <PropertyRef Name="Cost" />
+          </Key>
+          <Property Name="BookID" Type="Int32" Nullable="false" />
+          <Property Name="ISBN" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
+          <Property Name="BookTitle" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BookAuthor" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="true" />
+          <Property Name="PublisherName" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="40" Unicode="false" FixedLength="true" />
+          <Property Name="BookPrice" Type="Decimal" Precision="8" Scale="2" />
+          <Property Name="QuantityOnHand" Type="Decimal" Nullable="false" Precision="12" Scale="0" />
+          <Property Name="CopyrightDate" Type="Decimal" Nullable="false" Precision="4" Scale="0" />
+          <Property Name="Cost" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+        </EntityType>
+        <EntityType Name="Multicard">
+          <Key>
+            <PropertyRef Name="Fname" />
+            <PropertyRef Name="Lname" />
+            <PropertyRef Name="CardType" />
+            <PropertyRef Name="CardNumber" />
+          </Key>
+          <Property Name="Email" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Fname" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="Lname" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="Phone" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="CardType" Type="String" Nullable="false" MaxLength="25" Unicode="false" FixedLength="true" />
+          <Property Name="CardNumber" Type="Decimal" Nullable="false" Precision="12" Scale="0" />
+        </EntityType>
+        <Association Name="Book_CatFK">
+          <End Role="CATEGORY" Type="jnolanModel.CATEGORY" Multiplicity="1" />
+          <End Role="BOOKS" Type="jnolanModel.BOOK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORY">
+              <PropertyRef Name="Category_ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="Category_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Book_PubFK">
+          <End Role="PUBLISHER" Type="jnolanModel.PUBLISHER" Multiplicity="1" />
+          <End Role="BOOKS" Type="jnolanModel.BOOK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHER">
+              <PropertyRef Name="Publisher_ID" />
+            </Principal>
+            <Dependent Role="BOOKS">
+              <PropertyRef Name="Publisher_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cart_BookIDFK">
+          <End Role="BOOKS" Type="jnolanModel.BOOK" Multiplicity="1" />
+          <End Role="SHOPPING_CART" Type="jnolanModel.SHOPPING_CART" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BOOKS">
+              <PropertyRef Name="BookID" />
+            </Principal>
+            <Dependent Role="SHOPPING_CART">
+              <PropertyRef Name="BookID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CUSTOMER_CCARDFK2">
+          <End Role="CCARD" Type="jnolanModel.CCARD" Multiplicity="1" />
+          <End Role="CUSTOMER_CCARD" Type="jnolanModel.CUSTOMER_CCARD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CCARD">
+              <PropertyRef Name="CCARDID" />
+            </Principal>
+            <Dependent Role="CUSTOMER_CCARD">
+              <PropertyRef Name="CCardID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ContactFK">
+          <End Role="PUBLISHER" Type="jnolanModel.PUBLISHER" Multiplicity="1" />
+          <End Role="CONTACT" Type="jnolanModel.CONTACT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHER">
+              <PropertyRef Name="Publisher_ID" />
+            </Principal>
+            <Dependent Role="CONTACT">
+              <PropertyRef Name="Publisher_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CUSTOMER_CCARDFK">
+          <End Role="CUSTOMERS" Type="jnolanModel.CUSTOMER1" Multiplicity="1" />
+          <End Role="CUSTOMER_CCARD" Type="jnolanModel.CUSTOMER_CCARD" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMERS">
+              <PropertyRef Name="CID" />
+            </Principal>
+            <Dependent Role="CUSTOMER_CCARD">
+              <PropertyRef Name="CID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="InvoiceFK2">
+          <End Role="CUSTOMER_CCARD" Type="jnolanModel.CUSTOMER_CCARD" Multiplicity="1" />
+          <End Role="INVOICE" Type="jnolanModel.INVOICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMER_CCARD">
+              <PropertyRef Name="CUSTOMER_CCARD_ID" />
+            </Principal>
+            <Dependent Role="INVOICE">
+              <PropertyRef Name="CUSTOMER_CCARD_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Cart_CIDFK">
+          <End Role="CUSTOMERS" Type="jnolanModel.CUSTOMER1" Multiplicity="1" />
+          <End Role="SHOPPING_CART" Type="jnolanModel.SHOPPING_CART" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CUSTOMERS">
+              <PropertyRef Name="CID" />
+            </Principal>
+            <Dependent Role="SHOPPING_CART">
+              <PropertyRef Name="CID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="InvoiceFK">
+          <End Role="SHOPPING_CART" Type="jnolanModel.SHOPPING_CART" Multiplicity="1" />
+          <End Role="INVOICE" Type="jnolanModel.INVOICE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SHOPPING_CART">
+              <PropertyRef Name="Record_ID" />
+            </Principal>
+            <Dependent Role="INVOICE">
+              <PropertyRef Name="Record_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Order_DetailFK">
+          <End Role="ORDERR" Type="jnolanModel.ORDERR" Multiplicity="1" />
+          <End Role="ORDER_DETAIL" Type="jnolanModel.ORDER_DETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ORDERR">
+              <PropertyRef Name="Order_ID" />
+            </Principal>
+            <Dependent Role="ORDER_DETAIL">
+              <PropertyRef Name="Order_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Pub_Pub_AddFK">
+          <End Role="PUBLISHER" Type="jnolanModel.PUBLISHER" Multiplicity="1" />
+          <End Role="PUB_ADDRESS" Type="jnolanModel.PUB_ADDRESS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PUBLISHER">
+              <PropertyRef Name="Publisher_ID" />
+            </Principal>
+            <Dependent Role="PUB_ADDRESS">
+              <PropertyRef Name="Publisher_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="CUSTOMERS_BILLING_ADDRESS">
+          <End Role="BILLING_ADDRESS" Type="jnolanModel.BILLING_ADDRESS" Multiplicity="*" />
+          <End Role="CUSTOMERS" Type="jnolanModel.CUSTOMER1" Multiplicity="*" />
+        </Association>
+        <Association Name="CUSTOMERS_SHIPPING_ADDRESS">
+          <End Role="CUSTOMERS" Type="jnolanModel.CUSTOMER1" Multiplicity="*" />
+          <End Role="SHIPPING_ADDRESS" Type="jnolanModel.SHIPPING_ADDRESS" Multiplicity="*" />
+        </Association>
+        <ComplexType Name="Search_Result">
+          <Property Type="Decimal" Name="Isbn" Nullable="false" Precision="10" Scale="0" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="Author" Nullable="false" MaxLength="50" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="8" Scale="2" />
+          <Property Type="String" Name="Publisher_Name" Nullable="false" MaxLength="40" />
+          <Property Type="String" Name="CategoryName" Nullable="false" MaxLength="40" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="jnolanModelStoreContainer" CdmEntityContainer="jnolanEntities6">
+          <EntitySetMapping Name="ADMINISTRATORs">
+            <EntityTypeMapping TypeName="jnolanModel.ADMINISTRATOR">
+              <MappingFragment StoreEntitySet="ADMINISTRATOR">
+                <ScalarProperty Name="AdminID" ColumnName="AdminID" />
+                <ScalarProperty Name="LName" ColumnName="LName" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="Pword" ColumnName="Pword" />
+                <ScalarProperty Name="LoginStatus" ColumnName="LoginStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BILLING_ADDRESS">
+            <EntityTypeMapping TypeName="jnolanModel.BILLING_ADDRESS">
+              <MappingFragment StoreEntitySet="BILLING_ADDRESS">
+                <ScalarProperty Name="Billing_ID" ColumnName="Billing_ID" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BOOKS">
+            <EntityTypeMapping TypeName="jnolanModel.BOOK">
+              <MappingFragment StoreEntitySet="BOOKS">
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="Isbn" ColumnName="Isbn" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Publisher_ID" ColumnName="Publisher_ID" />
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+                <ScalarProperty Name="CopyDate" ColumnName="CopyDate" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CATEGORies">
+            <EntityTypeMapping TypeName="jnolanModel.CATEGORY">
+              <MappingFragment StoreEntitySet="CATEGORY">
+                <ScalarProperty Name="Category_ID" ColumnName="Category_ID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CCARDs">
+            <EntityTypeMapping TypeName="jnolanModel.CCARD">
+              <MappingFragment StoreEntitySet="CCARD">
+                <ScalarProperty Name="CCARDID" ColumnName="CCARDID" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="CCardNumber" ColumnName="CCardNumber" />
+                <ScalarProperty Name="LName" ColumnName="LName" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+                <ScalarProperty Name="SecurityCode" ColumnName="SecurityCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CONTACTs">
+            <EntityTypeMapping TypeName="jnolanModel.CONTACT">
+              <MappingFragment StoreEntitySet="CONTACT">
+                <ScalarProperty Name="Contact_ID" ColumnName="Contact_ID" />
+                <ScalarProperty Name="LName" ColumnName="LName" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Publisher_ID" ColumnName="Publisher_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMERs">
+            <EntityTypeMapping TypeName="jnolanModel.CUSTOMER">
+              <MappingFragment StoreEntitySet="CUSTOMER">
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Pword" ColumnName="Pword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMER_CCARD">
+            <EntityTypeMapping TypeName="jnolanModel.CUSTOMER_CCARD">
+              <MappingFragment StoreEntitySet="CUSTOMER_CCARD">
+                <ScalarProperty Name="CUSTOMER_CCARD_ID" ColumnName="CUSTOMER_CCARD_ID" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="CCardID" ColumnName="CCardID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CUSTOMERS1">
+            <EntityTypeMapping TypeName="jnolanModel.CUSTOMER1">
+              <MappingFragment StoreEntitySet="CUSTOMERS">
+                <ScalarProperty Name="CID" ColumnName="CID" />
+                <ScalarProperty Name="LName" ColumnName="LName" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="HPhone" ColumnName="HPhone" />
+                <ScalarProperty Name="WPhone" ColumnName="WPhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Pword" ColumnName="Pword" />
+                <ScalarProperty Name="LoginStatus" ColumnName="LoginStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="INVOICEs">
+            <EntityTypeMapping TypeName="jnolanModel.INVOICE">
+              <MappingFragment StoreEntitySet="INVOICE">
+                <ScalarProperty Name="Invoice_ID" ColumnName="Invoice_ID" />
+                <ScalarProperty Name="Date_Of_Purchase" ColumnName="Date_Of_Purchase" />
+                <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="CUSTOMER_CCARD_ID" ColumnName="CUSTOMER_CCARD_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORDER_DETAIL">
+            <EntityTypeMapping TypeName="jnolanModel.ORDER_DETAIL">
+              <MappingFragment StoreEntitySet="ORDER_DETAIL">
+                <ScalarProperty Name="OrderDetail_ID" ColumnName="OrderDetail_ID" />
+                <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ORDERRs">
+            <EntityTypeMapping TypeName="jnolanModel.ORDERR">
+              <MappingFragment StoreEntitySet="ORDERR">
+                <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+                <ScalarProperty Name="DateOfOrder" ColumnName="DateOfOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PUB_ADDRESS">
+            <EntityTypeMapping TypeName="jnolanModel.PUB_ADDRESS">
+              <MappingFragment StoreEntitySet="PUB_ADDRESS">
+                <ScalarProperty Name="Pub_Add_ID" ColumnName="Pub_Add_ID" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+                <ScalarProperty Name="Publisher_ID" ColumnName="Publisher_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PUBLISHERs">
+            <EntityTypeMapping TypeName="jnolanModel.PUBLISHER">
+              <MappingFragment StoreEntitySet="PUBLISHER">
+                <ScalarProperty Name="Publisher_ID" ColumnName="Publisher_ID" />
+                <ScalarProperty Name="Publisher_Name" ColumnName="Publisher_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SERVICEs">
+            <EntityTypeMapping TypeName="jnolanModel.SERVICE">
+              <MappingFragment StoreEntitySet="SERVICE">
+                <ScalarProperty Name="Service1" ColumnName="Service" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="UnitPrice" ColumnName="UnitPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SHIPPING_ADDRESS">
+            <EntityTypeMapping TypeName="jnolanModel.SHIPPING_ADDRESS">
+              <MappingFragment StoreEntitySet="SHIPPING_ADDRESS">
+                <ScalarProperty Name="SH_Add_ID" ColumnName="SH_Add_ID" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Zip" ColumnName="Zip" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SHOPPING_CART">
+            <EntityTypeMapping TypeName="jnolanModel.SHOPPING_CART">
+              <MappingFragment StoreEntitySet="SHOPPING_CART">
+                <ScalarProperty Name="Record_ID" ColumnName="Record_ID" />
+                <ScalarProperty Name="Cart_ID" ColumnName="Cart_ID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="CartStatus" ColumnName="CartStatus" />
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="jnolanModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SystemUsers">
+            <EntityTypeMapping TypeName="jnolanModel.SystemUser">
+              <MappingFragment StoreEntitySet="SystemUsers">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AllCustomerHistories">
+            <EntityTypeMapping TypeName="jnolanModel.AllCustomerHistory">
+              <MappingFragment StoreEntitySet="AllCustomerHistory">
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="Lastname" ColumnName="Lastname" />
+                <ScalarProperty Name="DatePurchased" ColumnName="DatePurchased" />
+                <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
+                <ScalarProperty Name="ShipStreet" ColumnName="ShipStreet" />
+                <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+                <ScalarProperty Name="ShipST" ColumnName="ShipST" />
+                <ScalarProperty Name="ShipCountry" ColumnName="ShipCountry" />
+                <ScalarProperty Name="ShipZip" ColumnName="ShipZip" />
+                <ScalarProperty Name="BillStreet" ColumnName="BillStreet" />
+                <ScalarProperty Name="BillCity" ColumnName="BillCity" />
+                <ScalarProperty Name="BillST" ColumnName="BillST" />
+                <ScalarProperty Name="BillCountry" ColumnName="BillCountry" />
+                <ScalarProperty Name="BillZip" ColumnName="BillZip" />
+                <ScalarProperty Name="BillingAddress" ColumnName="BillingAddress" />
+                <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+                <ScalarProperty Name="BookPrice" ColumnName="BookPrice" />
+                <ScalarProperty Name="ExtendedPrice" ColumnName="ExtendedPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CheckoutButtons">
+            <EntityTypeMapping TypeName="jnolanModel.CheckoutButton">
+              <MappingFragment StoreEntitySet="CheckoutButton">
+                <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
+                <ScalarProperty Name="ShipStreet" ColumnName="ShipStreet" />
+                <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+                <ScalarProperty Name="ShipST" ColumnName="ShipST" />
+                <ScalarProperty Name="ShipCountry" ColumnName="ShipCountry" />
+                <ScalarProperty Name="ShipZip" ColumnName="ShipZip" />
+                <ScalarProperty Name="BillStreet" ColumnName="BillStreet" />
+                <ScalarProperty Name="BillCity" ColumnName="BillCity" />
+                <ScalarProperty Name="BillST" ColumnName="BillST" />
+                <ScalarProperty Name="BillCountry" ColumnName="BillCountry" />
+                <ScalarProperty Name="BillZip" ColumnName="BillZip" />
+                <ScalarProperty Name="BillingAddress" ColumnName="BillingAddress" />
+                <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+                <ScalarProperty Name="BookPrice" ColumnName="BookPrice" />
+                <ScalarProperty Name="ExtendedPrice" ColumnName="ExtendedPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomerHistories">
+            <EntityTypeMapping TypeName="jnolanModel.CustomerHistory">
+              <MappingFragment StoreEntitySet="CustomerHistory">
+                <ScalarProperty Name="DatePurchased" ColumnName="DatePurchased" />
+                <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
+                <ScalarProperty Name="ShipStreet" ColumnName="ShipStreet" />
+                <ScalarProperty Name="ShipCity" ColumnName="ShipCity" />
+                <ScalarProperty Name="ShipST" ColumnName="ShipST" />
+                <ScalarProperty Name="ShipCountry" ColumnName="ShipCountry" />
+                <ScalarProperty Name="ShipZip" ColumnName="ShipZip" />
+                <ScalarProperty Name="BillStreet" ColumnName="BillStreet" />
+                <ScalarProperty Name="BillCity" ColumnName="BillCity" />
+                <ScalarProperty Name="BillST" ColumnName="BillST" />
+                <ScalarProperty Name="BillCountry" ColumnName="BillCountry" />
+                <ScalarProperty Name="BillZip" ColumnName="BillZip" />
+                <ScalarProperty Name="BillingAddress" ColumnName="BillingAddress" />
+                <ScalarProperty Name="CreditCard" ColumnName="CreditCard" />
+                <ScalarProperty Name="BookPrice" ColumnName="BookPrice" />
+                <ScalarProperty Name="ExtendedPrice" ColumnName="ExtendedPrice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CustomersViews">
+            <EntityTypeMapping TypeName="jnolanModel.CustomersView">
+              <MappingFragment StoreEntitySet="CustomersView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="ST" ColumnName="ST" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InventoryListViews">
+            <EntityTypeMapping TypeName="jnolanModel.InventoryListView">
+              <MappingFragment StoreEntitySet="InventoryListView">
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+                <ScalarProperty Name="BookTitle" ColumnName="BookTitle" />
+                <ScalarProperty Name="BookAuthor" ColumnName="BookAuthor" />
+                <ScalarProperty Name="PublisherName" ColumnName="PublisherName" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="BookPrice" ColumnName="BookPrice" />
+                <ScalarProperty Name="QuantityOnHand" ColumnName="QuantityOnHand" />
+                <ScalarProperty Name="CopyrightDate" ColumnName="CopyrightDate" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Multicards">
+            <EntityTypeMapping TypeName="jnolanModel.Multicard">
+              <MappingFragment StoreEntitySet="Multicard">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fname" ColumnName="Fname" />
+                <ScalarProperty Name="Lname" ColumnName="Lname" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="CardType" ColumnName="CardType" />
+                <ScalarProperty Name="CardNumber" ColumnName="CardNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="CUSTOMERS_BILLING_ADDRESS" TypeName="jnolanModel.CUSTOMERS_BILLING_ADDRESS" StoreEntitySet="CUSTOMERS_BILLING_ADDRESS">
+            <EndProperty Name="BILLING_ADDRESS">
+              <ScalarProperty Name="Billing_ID" ColumnName="Billing_ID" />
+            </EndProperty>
+            <EndProperty Name="CUSTOMERS">
+              <ScalarProperty Name="CID" ColumnName="CID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="CUSTOMERS_SHIPPING_ADDRESS" TypeName="jnolanModel.CUSTOMERS_SHIPPING_ADDRESS" StoreEntitySet="CUSTOMERS_SHIPPING_ADDRESS">
+            <EndProperty Name="CUSTOMERS">
+              <ScalarProperty Name="CID" ColumnName="CID" />
+            </EndProperty>
+            <EndProperty Name="SHIPPING_ADDRESS">
+              <ScalarProperty Name="SH_Add_ID" ColumnName="SH_Add_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="CustomerReport" FunctionName="jnolanModel.Store.CustomerReport" />
+          <FunctionImportMapping FunctionImportName="DeleteShopping_Cart" FunctionName="jnolanModel.Store.DeleteShopping_Cart" />
+          <FunctionImportMapping FunctionImportName="InsertAdmin" FunctionName="jnolanModel.Store.InsertAdmin" />
+          <FunctionImportMapping FunctionImportName="InsertBillingAddress" FunctionName="jnolanModel.Store.InsertBillingAddress" />
+          <FunctionImportMapping FunctionImportName="InsertBooks" FunctionName="jnolanModel.Store.InsertBooks" />
+          <FunctionImportMapping FunctionImportName="InsertCategory" FunctionName="jnolanModel.Store.InsertCategory" />
+          <FunctionImportMapping FunctionImportName="InsertCCARD" FunctionName="jnolanModel.Store.InsertCCARD" />
+          <FunctionImportMapping FunctionImportName="InsertCustomer" FunctionName="jnolanModel.Store.InsertCustomer" />
+          <FunctionImportMapping FunctionImportName="InsertInvoice" FunctionName="jnolanModel.Store.InsertInvoice" />
+          <FunctionImportMapping FunctionImportName="InsertP_B" FunctionName="jnolanModel.Store.InsertP_B" />
+          <FunctionImportMapping FunctionImportName="InsertPubAddress" FunctionName="jnolanModel.Store.InsertPubAddress" />
+          <FunctionImportMapping FunctionImportName="InsertPubContact" FunctionName="jnolanModel.Store.InsertPubContact" />
+          <FunctionImportMapping FunctionImportName="InsertPublisher" FunctionName="jnolanModel.Store.InsertPublisher" />
+          <FunctionImportMapping FunctionImportName="InsertShippingAddress" FunctionName="jnolanModel.Store.InsertShippingAddress" />
+          <FunctionImportMapping FunctionImportName="InsertShopping_Cart" FunctionName="jnolanModel.Store.InsertShopping_Cart" />
+          <FunctionImportMapping FunctionImportName="Search" FunctionName="jnolanModel.Store.Search">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="jnolanModel.Search_Result">
+                <ScalarProperty Name="Isbn" ColumnName="Isbn" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Publisher_Name" ColumnName="Publisher_Name" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="jnolanModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="jnolanModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="jnolanModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="jnolanModel.Store.sp_helpdiagramdefinition" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="jnolanModel.Store.sp_helpdiagrams" />
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="jnolanModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="jnolanModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="UpdateBooks" FunctionName="jnolanModel.Store.UpdateBooks" />
+          <FunctionImportMapping FunctionImportName="UpdateCustomers" FunctionName="jnolanModel.Store.UpdateCustomers" />
+          <FunctionImportMapping FunctionImportName="UpdateShopping_Cart" FunctionName="jnolanModel.Store.UpdateShopping_Cart" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

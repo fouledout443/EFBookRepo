@@ -1,0 +1,18 @@
+﻿@model List<EFBook.BOOK>
+@{
+    ViewBag.Title = "ASP.NET MVC Music Store";
+}
+<div id="promotion">
+</div>
+<h3><em>Fresh</em> out the kettle</h3>
+<ul id="book-list">
+    @foreach (var book in Model)
+    {
+        <li><a href="@Url.Action("Details", "Store",
+                new { id = book.BookID })">
+            <img alt="@book.Title" src="~/Content/Images/placeholder.png"/>
+            <span>@book.Title</span>
+</a>
+        </li>
+    }
+</ul>

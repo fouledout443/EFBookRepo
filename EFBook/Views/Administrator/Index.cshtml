@@ -1,0 +1,90 @@
+﻿@model IEnumerable<EFBook.BOOK>
+
+@helper Truncate(string input, int length)
+ {
+    if (input.Length >= length) {
+        @input
+    } else {
+        @input.Substring(0, length)<text>...</text>
+    }
+} 
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+           Isbn
+        </th>
+        <th>
+            Title
+        </th>
+        <th>
+            Author
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Publisher Name
+        </th>
+        <th>
+            Category Name
+        </th>
+        <th>
+            Copyright Date
+        </th>
+        <th>
+            Cost
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Isbn)
+        </td>
+        <td>
+            @Truncate(item.Title, 20)
+        </td>
+        <td>
+           @Truncate(item.Author, 20)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PUBLISHER.Publisher_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CATEGORY.CategoryName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CopyDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cost)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BookID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BookID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BookID })
+        </td>
+    </tr>
+}
+
+</table>
